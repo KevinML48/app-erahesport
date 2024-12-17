@@ -15,16 +15,16 @@
 <body>
     <div class="container">
         <div class="login__content">
-            <img src="{{ asset('build/assets/image/bg-login.png') }}" alt="login image" class="login__img">
+            <img src="{{ asset('build/assets/image/logo-fond.png') }}" alt="login image" class="login__img">
 
             <form method="POST" action="{{ route('login') }}" class="login__form">
                 @csrf
                 <div>
                     <h1 class="login__title">
-                        <span>Welcome</span> Back
+                        <span>Vous</span> revoila !
                     </h1>
                     <p class="login__description">
-                        Welcome! Please login to continue.
+                        Connectez-vous
                     </p>
                 </div>
 
@@ -40,7 +40,7 @@
 
                     <!-- Password -->
                     <div>
-                        <label for="password" class="login__label">{{ __('Password') }}</label>
+                        <label for="password" class="login__label">{{ __('Mot de passe') }}</label>
                         <div class="login__box">
                             <input id="password" type="password" name="password" required autocomplete="current-password" class="login__input" />
                             <i class="ri-eye-off-line login__eye" id="input-icon"></i>
@@ -54,7 +54,7 @@
                 <!-- Remember Me -->
                 <div class="login__check">
                     <input id="remember_me" type="checkbox" name="remember" class="login__check-input" />
-                    <label for="remember_me" class="login__check-label">{{ __('Remember me') }}</label>
+                    <label for="remember_me" class="login__check-label">{{ __('Ce rapeller de moi') }}</label>
                 </div>
 
                 <div>
@@ -65,7 +65,7 @@
 
                     <!-- Forgot Password -->
                     @if (Route::has('password.request'))
-                        <a href="{{ route('password.request') }}" class="login__forgot">{{ __('Forgot Password?') }}</a>
+                        <a href="{{ route('password.request') }}" class="login__forgot">{{ __('Mot de passe oublier ?') }}</a>
                     @endif
                 </div>
             </form>
