@@ -19,8 +19,8 @@
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">
-                <i class="ri-cactus-line"></i> Cactus
+            <a href="/" class="nav__logo">
+                ERAH
             </a>
 
             <div class="nav__menu" id="nav-menu">
@@ -30,11 +30,11 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="#new" class="nav__link">News</a>
+                        <a href="#new" class="nav__link">Supports</a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#shop" class="nav__link">Shop</a>
+                        <a href="#shop" class="nav__link">Produits</a>
                     </li>
 
                     <li class="nav__item">
@@ -96,30 +96,28 @@
             <div class="new__container container grid">
                 <div class="new__data">
                     <h2 class="section__title">
-                        NEW PLANTS FOR <br> YOUR HOME
+                        CE QUE NOUS FAISONS <br> POUR VOUS
                     </h2>
 
                     <p class="new__description">
-                        Select new ornamental plants for home 
-                        decoration and obtain an atmosphere of 
-                        harmony and freshness.
+                        Nous souhaitons vous offrir les meilleures conditions possibles pour atteindre vos objectifs rapidement et vous faire vivre une véritable expérience.
                     </p>
                 </div>
 
                 <div class="new__content grid">
                     <article class="new__card">
                         <img src="{{ asset('build/assets/image/new-cactus-1.png') }}" alt="image" class="new__img">
-                        <h2 class="new__title">Gymnocalycium Cactus</h2>
+                        <h2 class="new__title">Suivis Compétitif</h2>
                     </article>
 
                     <article class="new__card">
                         <img src="{{ asset('build/assets/image/new-cactus-2.png') }}" alt="image" class="new__img">
-                        <h2 class="new__title">Lily Pad Succulent</h2>
+                        <h2 class="new__title">Ressources</h2>
                     </article>
 
                     <article class="new__card">
                         <img src="{{ asset('build/assets/image/new-cactus-3.png') }}" alt="image" class="new__img">
-                        <h2 class="new__title">Rebutia Cactus</h2>
+                        <h2 class="new__title">Développement Visuel</h2>
                     </article>
                 </div>
             </div>
@@ -128,26 +126,15 @@
         <!--==================== SHOP ====================-->
         <section class="shop section" id="shop">
             <h2 class="section__title">
-                THE BEST PLANTS
+                NOS PRODUITS
             </h2>
 
             <div class="shop__container container grid">
                 <article class="shop__card">
-                    <img src="{{ asset('build/assets/image/shop-cactus-1.png') }}" alt="image" class="shop__img">
+                    <img src="{{ asset('build/assets/image/maillot-2025.png') }}" alt="image" class="shop__img">
 
-                    <h3 class="shop__title">Gymnocalycium <br> Cactus</h3>
-                    <span class="shop__price">$15</span>
-
-                    <button class="shop__button">
-                        <i class="ri-shopping-bag-line"></i>
-                    </button>
-                </article>
-
-                <article class="shop__card">
-                    <img src="{{ asset('build/assets/image/shop-cactus-2.png') }}" alt="image" class="shop__img">
-
-                    <h3 class="shop__title">Echeveria <br> Succulent</h3>
-                    <span class="shop__price">$10</span>
+                    <h3 class="shop__title">Maillot <br> 2025</h3>
+                    <span class="shop__price">31,99$</span>
 
                     <button class="shop__button">
                         <i class="ri-shopping-bag-line"></i>
@@ -155,21 +142,10 @@
                 </article>
 
                 <article class="shop__card">
-                    <img src="{{ asset('build/assets/image/shop-cactus-3.png') }}" alt="image" class="shop__img">
+                    <img src="{{ asset('build/assets/image/JERSEY - erah.png') }}" alt="image" class="shop__img">
 
-                    <h3 class="shop__title">Ferocactus <br> Cactus</h3>
-                    <span class="shop__price">$15</span>
-
-                    <button class="shop__button">
-                        <i class="ri-shopping-bag-line"></i>
-                    </button>
-                </article>
-
-                <article class="shop__card">
-                    <img src="{{ asset('build/assets/image/shop-cactus-4.png') }}" alt="image" class="shop__img">
-
-                    <h3 class="shop__title">Key Lime Pie <br> Succulent</h3>
-                    <span class="shop__price">$10</span>
+                    <h3 class="shop__title">Maillot <br> 2026</h3>
+                    <span class="shop__price">31,99$</span>
 
                     <button class="shop__button">
                         <i class="ri-shopping-bag-line"></i>
@@ -177,10 +153,32 @@
                 </article>
 
                 <article class="shop__card">
-                    <img src="{{ asset('build/assets/image/shop-cactus-5.png') }}" alt="image" class="shop__img">
+                    <img src="{{ asset('build/assets/image/Manchettes.png') }}" alt="image" class="shop__img">
 
-                    <h3 class="shop__title">Melocactus <br> Cactus</h3>
-                    <span class="shop__price">$15</span>
+                    <h3 class="shop__title">Manchettes <br> 2024</h3>
+                    <span class="shop__price">18$</span>
+
+                    <button class="shop__button">
+                        <i class="ri-shopping-bag-line"></i>
+                    </button>
+                </article>
+
+                <article class="shop__card">
+                    <img src="{{ asset('build/assets/image/tapis de souris.png') }}" alt="image" class="shop__img">
+
+                    <h3 class="shop__title">Tapis de <br> souris</h3>
+                    <span class="shop__price">35$</span>
+
+                    <button class="shop__button">
+                        <i class="ri-shopping-bag-line"></i>
+                    </button>
+                </article>
+
+                <article class="shop__card">
+                    <img src="{{ asset('build/assets/image/unnamed.png') }}" alt="image" class="shop__img">
+
+                    <h3 class="shop__title">En <br> développement</h3>
+                    <span class="shop__price"></span>
 
                     <button class="shop__button">
                         <i class="ri-shopping-bag-line"></i>
