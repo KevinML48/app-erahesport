@@ -9,16 +9,18 @@ class Player extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['member_id', 'team_id', 'domain_id', 'image'];
+    protected $fillable = ['member_id', 'domain_id', 'team_id', 'image_path'];
 
-    public function member()
-    {
-        return $this->belongsTo(Member::class);
-    }
-
+    // Relation avec une équipe
     public function team()
     {
         return $this->belongsTo(Team::class);
+    }
+
+    // Relation avec un membre
+    public function member()
+    {
+        return $this->belongsTo(Member::class);
     }
 
     public function domain()

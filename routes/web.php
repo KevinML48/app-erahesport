@@ -60,4 +60,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/players/{player}', [PlayerController::class, 'destroy'])->name('players.destroy'); // Suppression
 });
 
+Route::get('/team/{id}', [TeamController::class, 'show'])->name('team.show');
+
 require __DIR__.'/auth.php';

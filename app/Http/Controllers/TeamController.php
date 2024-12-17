@@ -96,4 +96,17 @@ public function destroy($id)
     return redirect()->route('teams.index')->with('success', 'Équipe supprimée avec succès.');
 }
 
+public function show($id)
+{
+    $team = Team::with(['players', 'domain'])->findOrFail($id);
+
+    $playerCount = $team->players->count(); // Nombre de joueurs dans l'équipe
+
+    // Utilisez 'teams.show' au lieu de 'team.show'
+    return view('teams.show', [
+        'team' => $team,
+        'playerCount' => $playerCount,
+    ]);
+}
+
 }

@@ -11,6 +11,13 @@ class Team extends Model
 
     protected $fillable = ['name', 'description', 'image', 'domain_id'];
 
+    // Relation avec les joueurs
+    public function players()
+    {
+        return $this->hasMany(Player::class);
+    }
+
+    // Relation avec le domaine
     public function domain()
     {
         return $this->belongsTo(Domain::class);

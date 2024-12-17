@@ -89,7 +89,7 @@
                     <!-- Affichage du nom de l'équipe -->
                     <h2 class="card__title">{{ $team->name }}</h2>
                     <!-- Lien pour plus d'infos -->
-                    <a href="#" class="card__button">Informations</a>
+                    <a href="/team/{{ $team->id }}" class="card__button">Informations</a>
                 </div>
             </article>
             @endforeach
