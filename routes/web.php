@@ -7,6 +7,7 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PlayerController;
+use App\Http\Controllers\InformationController;
 use App\Models\Team;
 
 Route::get('/', function () {
@@ -61,5 +62,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/team/{id}', [TeamController::class, 'show'])->name('team.show');
+
+Route::get('/informations', [InformationController::class, 'index'])->name('informations.page');
 
 require __DIR__.'/auth.php';

@@ -64,14 +64,18 @@
                         <p class="share__description">Découvrez tout nos domaines d'activités mais
                                     également ce que l'on propose si vous
                                     intégrez ERAH</p>
-                        <a href="#" class="button">En savoir plus</a>
+                        <a href="/informations" class="button">En savoir plus</a>
                     </div>
 
                     <div class="share__img">
-                        <img src="{{ asset('build/assets/image/image-welcome.png') }}" alt="">
+                        <img src="{{ asset('build/assets/image/shared.png') }}" alt="">
                     </div>
                 </div>
             </section>
+            <br>
+            <br>
+            <br>
+            <br>
 
             <!--========== DECORATION ==========-->
             <h2 class="section-title" id="equipes">Voici nos équipes</h2>
