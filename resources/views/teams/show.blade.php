@@ -80,8 +80,8 @@
                     <div class="swiper-wrapper">
                         @foreach($team->players as $player)
                         <article class="travel__card swiper-slide">
-                            @if($player->image_path)
-                            <img src="{{ asset('storage/players/iaY4GQES0JXMHKOu4geBAmc4YXQUvqcMeevo4qXo.png') }}" alt="Player Image">
+                            @if($player->image)
+                            <img src="{{ asset('storage/' . $player->image) }}" alt="Default Player Image" class="travel__img">
                             @else
                             <img src="{{ asset('build/assets/image/logo.png') }}" alt="Default Player Image" class="travel__img">
                             @endif
