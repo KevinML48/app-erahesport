@@ -6,6 +6,7 @@ use App\Http\Controllers\DomainController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\PlayerController;
 use App\Models\Team;
 
 Route::get('/', function () {
@@ -50,6 +51,13 @@ Route::middleware('auth')->group(function () {
     Route::get('members/{member}/edit', [MemberController::class, 'edit'])->name('members.edit'); // Formulaire d'édition
     Route::put('members/{member}', [MemberController::class, 'update'])->name('members.update'); // Mise à jour du membre
     Route::delete('members/{member}', [MemberController::class, 'destroy'])->name('members.destroy'); // Suppression du membre
+
+    Route::get('/players', [PlayerController::class, 'index'])->name('players.index'); // Liste des joueurs
+    Route::get('/players/create', [PlayerController::class, 'create'])->name('players.create'); // Formulaire de création
+    Route::post('/players', [PlayerController::class, 'store'])->name('players.store'); // Enregistrement
+    Route::get('/players/{player}/edit', [PlayerController::class, 'edit'])->name('players.edit'); // Formulaire d'édition
+    Route::put('/players/{player}', [PlayerController::class, 'update'])->name('players.update'); // Mise à jour
+    Route::delete('/players/{player}', [PlayerController::class, 'destroy'])->name('players.destroy'); // Suppression
 });
 
 require __DIR__.'/auth.php';
