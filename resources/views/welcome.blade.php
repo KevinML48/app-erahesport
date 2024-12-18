@@ -51,7 +51,7 @@
                         <h1 class="home__title">Bienvenue !</h1>
                         <p class="home__description">Découvrez notre plateforme pour vous
                         facilitez vos recrutement et vos démarches !</p>
-                        <a href="#equipes" class="button">Postuler ?</a>
+                        <a href="/proposition" class="button">Postuler ?</a>
                     </div>   
                 </div>
             </section>

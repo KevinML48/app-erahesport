@@ -101,7 +101,7 @@ class OfferController extends Controller
 
         $offers = $query->get();
         $totalOffers = $offers->count();
-        $domains = Domaine::all();
+        $domains = Domain::all();
 
         return view('offers.all', compact('offers', 'domains', 'totalOffers'));
     }
