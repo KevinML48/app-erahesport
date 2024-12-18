@@ -162,83 +162,99 @@
                 </div>
 
                 <form action="{{ route('applications.store') }}" method="POST" class="contact__form">
-                    @csrf
-                    <div class="contact__inputs">
-                        <div class="contact__content">
-                            <input type="text" name="first_name" placeholder=" " class="contact__input" required>
-                            <label class="contact__label">Prénom</label>
-                        </div>
+    @csrf
 
-                        <div class="contact__content">
-                            <input type="text" name="last_name" placeholder=" " class="contact__input" required>
-                            <label class="contact__label">Nom</label>
-                        </div>
+    <!-- Afficher les messages de succès -->
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
 
-                        <div class="contact__content">
-                            <input type="text" name="username" placeholder=" " class="contact__input" required>
-                            <label class="contact__label">Pseudo</label>
-                        </div>
+    <!-- Afficher les erreurs -->
+    @if($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
-                        <div class="contact__content">
-            <input type="email" name="email" placeholder=" " class="contact__input" value="{{ $email }}" required>
-            <label class="contact__label">Email</label>
+    <div class="contact__inputs">
+        <div class="contact__content">
+            <input type="text" name="first_name" placeholder=" " class="contact__input" value="{{ old('first_name') }}" required>
+            <label class="contact__label">Prénom</label>
+            @error('first_name')
+                <div class="text-red-500 text-sm">{{ $message }}</div>
+            @enderror
         </div>
 
-                        <div class="contact__content contact__area">
-                            <textarea name="description" placeholder=" " class="contact__input" required></textarea>
-                            <label class="contact__label">Description</label>
-                        </div>
+        <div class="contact__content">
+            <input type="text" name="last_name" placeholder=" " class="contact__input" value="{{ old('last_name') }}" required>
+            <label class="contact__label">Nom</label>
+            @error('last_name')
+                <div class="text-red-500 text-sm">{{ $message }}</div>
+            @enderror
+        </div>
 
-                        <div class="contact__content">
-                            <select name="domain_id" class="contact__input" required style="background-color: black; color: white;">
-                                <option value="" disabled {{ !$domainId ? 'selected' : '' }}></option>
-                                @foreach($domains as $domain)
-                                <option value="{{ $domain->id }}" {{ $domain->id == $domainId ? 'selected' : '' }}>{{ $domain->name }}</option>
-                                @endforeach
-                            </select>
-                            <label class="contact__label">Domaine</label>
-                        </div>
+        <div class="contact__content">
+            <input type="text" name="username" placeholder=" " class="contact__input" value="{{ old('username') }}" required>
+            <label class="contact__label">Pseudo</label>
+            @error('username')
+                <div class="text-red-500 text-sm">{{ $message }}</div>
+            @enderror
+        </div>
 
-                        <div class="contact__content">
-                            <select name="position_id" class="contact__input" required style="background-color: black; color: white;">
-                                <option value="" disabled {{ !$positionId ? 'selected' : '' }}></option>
-                                @foreach($positions as $position)
-                                <option value="{{ $position->id }}" {{ $position->id == $positionId ? 'selected' : '' }}>{{ $position->name }}</option>
-                                @endforeach
-                            </select>
-                            <label class="contact__label">Position</label>
-                        </div>
-                    </div>
+        <div class="contact__content">
+            <input type="email" name="email" placeholder=" " class="contact__input" value="{{ old('email', $email) }}" required>
+            <label class="contact__label">Email</label>
+            @error('email')
+                <div class="text-red-500 text-sm">{{ $message }}</div>
+            @enderror
+        </div>
 
-                    <button type="submit" class="button button--flex">
-                        Enregistrer
-                        <i class="ri-arrow-right-up-line button__icon"></i>
-                    </button>
-                </form>
+        <div class="contact__content contact__area">
+            <textarea name="description" placeholder=" " class="contact__input" required>{{ old('description') }}</textarea>
+            <label class="contact__label">Description</label>
+            @error('description')
+                <div class="text-red-500 text-sm">{{ $message }}</div>
+            @enderror
+        </div>
 
-                @if (session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-                @endif
+        <div class="contact__content">
+            <select name="domain_id" class="contact__input" required style="background-color: black; color: white;">
+                <option value="" disabled {{ !$domainId ? 'selected' : '' }}></option>
+                @foreach($domains as $domain)
+                    <option value="{{ $domain->id }}" {{ old('domain_id') == $domain->id ? 'selected' : '' }}>{{ $domain->name }}</option>
+                @endforeach
+            </select>
+            <label class="contact__label">Domaine</label>
+            @error('domain_id')
+                <div class="text-red-500 text-sm">{{ $message }}</div>
+            @enderror
+        </div>
 
-                @if (session('error'))
-                <div class="alert alert-danger">
-                    {{ session('error') }}
-                </div>
-                @endif
+        <div class="contact__content">
+            <select name="position_id" class="contact__input" required style="background-color: black; color: white;">
+                <option value="" disabled {{ !$positionId ? 'selected' : '' }}></option>
+                @foreach($positions as $position)
+                    <option value="{{ $position->id }}" {{ old('position_id') == $position->id ? 'selected' : '' }}>{{ $position->name }}</option>
+                @endforeach
+            </select>
+            <label class="contact__label">Position</label>
+            @error('position_id')
+                <div class="text-red-500 text-sm">{{ $message }}</div>
+            @enderror
+        </div>
+    </div>
 
-                @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif
-
-
+    <button type="submit" class="button button--flex">
+        Enregistrer
+        <i class="ri-arrow-right-up-line button__icon"></i>
+    </button>
+</form>
             </div>
         </section>
     </main>

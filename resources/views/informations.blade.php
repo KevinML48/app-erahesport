@@ -77,7 +77,7 @@
                     </p>
 
                     <div class="home__buttons">
-                        <a href="#" class="button">
+                        <a href="{{ route('offers.all') }}" class="button">
                             <span>
                                 <i class="ri-arrow-right-line"></i>
                             </span>
