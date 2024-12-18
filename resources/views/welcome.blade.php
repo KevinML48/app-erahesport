@@ -102,28 +102,59 @@
 
             <!--========== SEND GIFT ==========-->
             <section class="send section" id="postuler">
-                <div class="send__container bd-container bd-grid">
-                    <div class="send__content">
-                        <h2 class="section-title-center send__title">Tentez votre chance !</h2>
-                        <p class="send__description">N'hésitez plus, passez à la seconde étape
-                        pour postuler au sein de ERAH</p>
-                        <form action="">
-                            <div class="send__direction">
-                                <input type="text" placeholder="Votre adresse email..." class="send__input">
-                                <a href="#" class="button">Postuler</a>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="send__img">
-                        <img src="{{ asset('build/assets/image/enveloppe.png') }}" alt="">
-                    </div>
+    <div class="send__container bd-container bd-grid">
+        <div class="send__content">
+            <h2 class="section-title-center send__title">Tentez votre chance !</h2>
+            <p class="send__description">N'hésitez plus, passez à la seconde étape pour postuler au sein de ERAH</p>
+            <form id="emailForm" novalidate>
+                <div class="send__direction">
+                    <input type="email" id="email" placeholder="Votre adresse email..." class="send__input" required>
+                    <a href="#" class="button" id="submitButton">Postuler</a>
                 </div>
-            </section>
+                <!-- Message d'erreur affiché en dessous du formulaire -->
+                <div id="errorMessage" style="color: red; display: none; margin-top: 10px;">Veuillez entrer une adresse email valide.</div>
+            </form>
+        </div>
+
+        <div class="send__img">
+            <img src="{{ asset('build/assets/image/enveloppe.png') }}" alt="">
+        </div>
+    </div>
+</section>
         </main>
 
         <!--========== SCROLL REVEAL ==========-->
         <script src="https://unpkg.com/scrollreveal"></script>
+
+        <script>
+    document.getElementById('submitButton').addEventListener('click', function(event) {
+        event.preventDefault(); // Empêcher la soumission du formulaire
+
+        var email = document.getElementById('email').value;
+        var errorMessage = document.getElementById('errorMessage');
+
+        // Vérifier si l'email est vide ou invalide
+        if (!email) {
+            errorMessage.textContent = 'L\'email est requis.';
+            errorMessage.style.display = 'block'; // Afficher le message d'erreur
+        } else if (!validateEmail(email)) {
+            errorMessage.textContent = 'Veuillez entrer une adresse email valide.';
+            errorMessage.style.display = 'block'; // Afficher le message d'erreur
+        } else {
+            // Masquer le message d'erreur si l'email est valide
+            errorMessage.style.display = 'none';
+
+            // Rediriger vers la page /proposition avec l'email dans l'URL et l'ancre #contact
+            window.location.href = '/proposition?email=' + encodeURIComponent(email) + '#contact';
+        }
+    });
+
+    // Fonction de validation d'email
+    function validateEmail(email) {
+        var re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return re.test(email);
+    }
+</script>
 
         <!--========== MAIN JS ==========-->
         <script src="{{ asset('build/assets/js/welcome.js') }}"></script>

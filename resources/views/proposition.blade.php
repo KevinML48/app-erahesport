@@ -180,9 +180,9 @@
                         </div>
 
                         <div class="contact__content">
-                            <input type="email" name="email" placeholder=" " class="contact__input" value="{{ $email }}" required>
-                            <label class="contact__label">Email</label>
-                        </div>
+            <input type="email" name="email" placeholder=" " class="contact__input" value="{{ $email }}" required>
+            <label class="contact__label">Email</label>
+        </div>
 
                         <div class="contact__content contact__area">
                             <textarea name="description" placeholder=" " class="contact__input" required></textarea>

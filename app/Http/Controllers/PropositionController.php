@@ -40,4 +40,13 @@ class PropositionController extends Controller
             return abort(500, 'Une erreur est survenue.');
         }
     }
+
+    public function showForm(Request $request)
+{
+    $email = $request->query('email');  // Récupérer l'email depuis l'URL
+    $domains = Domain::all();           // Exemple pour récupérer les domaines
+    $positions = Position::all();       // Exemple pour récupérer les positions
+
+    return view('proposition', compact('email', 'domains', 'positions'));
+}
 }
