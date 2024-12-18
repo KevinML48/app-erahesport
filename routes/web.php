@@ -8,7 +8,16 @@ use App\Http\Controllers\PositionController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\InformationController;
+use App\Http\Controllers\PropositionController;
+use App\Http\Controllers\OfferController;
+use App\Http\Controllers\ApplicationController;
 use App\Models\Team;
+
+Route::get('/application/user/{id}', [ApplicationController::class, 'showUser'])->name('application.showUser');
+Route::post('/applications/{id}/accept', [ApplicationController::class, 'accept'])->name('applications.accept');
+
+Route::get('/offers/all', [OfferController::class, 'showAllOffers'])->name('offers.all');
+Route::get('/offers/filter', [OfferController::class, 'showAllOffers'])->name('offers.filter');
 
 Route::get('/', function () {
     $teams = Team::with('domain')->get(); 
@@ -59,10 +68,22 @@ Route::middleware('auth')->group(function () {
     Route::get('/players/{player}/edit', [PlayerController::class, 'edit'])->name('players.edit'); // Formulaire d'édition
     Route::put('/players/{player}', [PlayerController::class, 'update'])->name('players.update'); // Mise à jour
     Route::delete('/players/{player}', [PlayerController::class, 'destroy'])->name('players.destroy'); // Suppression
+
+    Route::get('/offers', [OfferController::class, 'index'])->name('offers.index'); // Liste des offres
+    Route::get('/offers/create', [OfferController::class, 'create'])->name('offers.create'); // Formulaire de création
+    Route::post('/offers', [OfferController::class, 'store'])->name('offers.store'); // Enregistrement
+    Route::get('/offers/{offer}/edit', [OfferController::class, 'edit'])->name('offers.edit'); // Formulaire d'édition
+    Route::put('/offers/{offer}', [OfferController::class, 'update'])->name('offers.update'); // Mise à jour
+    Route::delete('/offers/{offer}', [OfferController::class, 'destroy'])->name('offers.destroy'); // Suppression
 });
+
+Route::get('/proposition', [PropositionController::class, 'index'])->name('proposition.index');
 
 Route::get('/team/{id}', [TeamController::class, 'show'])->name('team.show');
 
 Route::get('/informations', [InformationController::class, 'index'])->name('informations.page');
+
+Route::get('/applications/create', [ApplicationController::class, 'create'])->name('applications.create');
+Route::post('/applications', [ApplicationController::class, 'store'])->name('applications.store');
 
 require __DIR__.'/auth.php';
