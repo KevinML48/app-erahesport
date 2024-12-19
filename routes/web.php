@@ -12,6 +12,7 @@ use App\Http\Controllers\PropositionController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Middleware\AuthenticatedMiddleware;
 use App\Models\Team;
 
 // Routes publiques
