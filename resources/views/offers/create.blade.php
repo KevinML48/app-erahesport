@@ -65,7 +65,6 @@
 
                     <!-- Sélecteur pour le statut -->
                     <div class="input-box">
-    <label for="status" class="input-label">Statut de l'offre :</label>
     <select name="status" id="status" class="input-field" required>
         <option value="open">Ouverte</option>
         <option value="closed">Fermée</option>

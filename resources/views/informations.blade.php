@@ -137,18 +137,22 @@
                     <span class="shop__price">31,99$</span>
 
                     <button class="shop__button">
-                        <i class="ri-shopping-bag-line"></i>
+                        <a href="https://www.kapoli.fr/boutiquedesclubs/Maillot-ERAH-ESPORT-p617834822" target="_blank" style="text-decoration: none; color: black">
+                            <i class="ri-shopping-bag-line"></i>
+                        </a>
                     </button>
                 </article>
 
                 <article class="shop__card">
                     <img src="{{ asset('build/assets/image/JERSEY - erah.png') }}" alt="image" class="shop__img">
 
-                    <h3 class="shop__title">Maillot <br> 2026</h3>
+                    <h3 class="shop__title">Maillot <br> 2024</h3>
                     <span class="shop__price">31,99$</span>
 
                     <button class="shop__button">
-                        <i class="ri-shopping-bag-line"></i>
+                        <a href="https://www.kapoli.fr/boutiquedesclubs/Maillot-ERAH-ESPORT-p617834822" target="_blank" style="text-decoration: none; color: black">
+                            <i class="ri-shopping-bag-line"></i>
+                        </a>
                     </button>
                 </article>
 
@@ -159,7 +163,9 @@
                     <span class="shop__price">18$</span>
 
                     <button class="shop__button">
-                        <i class="ri-shopping-bag-line"></i>
+                        <a href="https://www.kapoli.fr/boutiquedesclubs/Manchettes-ERAH-p637545761" target="_blank" style="text-decoration: none; color: black">
+                            <i class="ri-shopping-bag-line"></i>
+                        </a>
                     </button>
                 </article>
 
@@ -170,7 +176,9 @@
                     <span class="shop__price">35$</span>
 
                     <button class="shop__button">
-                        <i class="ri-shopping-bag-line"></i>
+                        <a href="https://www.kapoli.fr/boutiquedesclubs/Tapis-de-souris-90-cmx40-cm-ERAH-ESPORT-p671070140" target="_blank" style="text-decoration: none; color: black">
+                            <i class="ri-shopping-bag-line"></i>
+                        </a>
                     </button>
                 </article>
 

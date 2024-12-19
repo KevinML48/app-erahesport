@@ -11,6 +11,7 @@ use App\Http\Controllers\InformationController;
 use App\Http\Controllers\PropositionController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\DashboardController;
 use App\Models\Team;
 
 // Routes publiques
@@ -18,11 +19,6 @@ Route::get('/', function () {
     $teams = Team::with('domain')->get(); 
     return view('welcome', compact('teams')); 
 });
-
-Route::get('/proposition', [PropositionController::class, 'index'])->name('proposition.index');
-Route::get('/team/{id}', [TeamController::class, 'show'])->name('team.show');
-Route::get('/informations', [InformationController::class, 'index'])->name('informations.page');
-Route::get('/applications/confirmation', [ApplicationController::class, 'confirmation'])->name('applications.confirmation');
 
 // Route d'affichage des candidatures par utilisateur
 Route::get('/application/user/{id}', [ApplicationController::class, 'showUser'])->name('application.showUser');
@@ -38,6 +34,12 @@ Route::get('/dashboard', function () {
 
 // Routes protégées par middleware auth
 Route::middleware('auth')->group(function () {
+
+    Route::get('/dashboard', [DashboardController::class, 'index'])
+        ->middleware(['auth', 'verified'])
+        ->name('dashboard');
+
+    Route::get('/api/dashboard/stats', [DashboardController::class, 'getDashboardStats']);
 
     // Domaines
     Route::get('/domains', [DomainController::class, 'index'])->name('domains.index'); 
@@ -95,10 +97,15 @@ Route::middleware('auth')->group(function () {
     // Applications
     Route::get('/applications', [ApplicationController::class, 'index'])->name('applications.index'); // Liste des candidatures
     Route::get('/applications/{id}', [ApplicationController::class, 'ShowCandidature'])->name('applications.show'); // Détails d'une candidature
-    Route::post('/applications', [ApplicationController::class, 'store'])->name('applications.store'); // Enregistrement d'une nouvelle candidature
     Route::delete('/applications/{application}', [ApplicationController::class, 'destroy'])->name('applications.destroy'); // Supprimer une candidature
     Route::post('/applications/{application}/accept', [ApplicationController::class, 'accept'])->name('applications.accept'); // Accepter une candidature
-    Route::get('/applications/user/{id}', [ApplicationController::class, 'showUser'])->name('application.showUser'); // Détails d'une candidature par utilisateur
 });
 
+Route::get('/proposition', [PropositionController::class, 'index'])->name('proposition.index');
+Route::get('/team/{id}', [TeamController::class, 'show'])->name('team.show');
+Route::get('/informations', [InformationController::class, 'index'])->name('informations.page');
+Route::get('/application/confirmation', [ApplicationController::class, 'confirmation'])->name('applications.confirmation');
+Route::post('/applications', [ApplicationController::class, 'store'])->name('applications.store'); // Enregistrement d'une nouvelle candidature
+
+// Authentification
 require __DIR__.'/auth.php';
