@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="{{ asset('build/assets/teams/assets/img/ERAH_Logo_sans_texte.png') }}" type="image/x-icon">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
 
     <link rel="stylesheet" href="{{ asset('build/assets/teams/assets/css/swiper-bundle.min.css') }}">
     <link rel="stylesheet" href="{{ asset('build/assets/teams/assets/css/styles.css') }}">
 
     <title>{{ $team->name }}</title>
+    <link rel="shortcut icon" href="{{ asset('build/assets/image/logo.png') }}" type="image/x-icon">
 </head>
 
 <body>

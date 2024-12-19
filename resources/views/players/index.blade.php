@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Liste des Joueurs</title>
     <link rel="stylesheet" href="/build/assets/css/tableau.css">
+    <link rel="shortcut icon" href="{{ asset('build/assets/image/logo.png') }}" type="image/x-icon">
 </head>
 <body>
     <main class="table" id="players_table">

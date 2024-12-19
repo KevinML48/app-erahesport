@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ludiflex | Créer une Offre</title>
+    <title>Créer une Offre</title>
     <!-- BOXICONS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="{{ asset('build/assets/image/logo.png') }}" type="image/x-icon">
     <!-- STYLE -->
     <link rel="stylesheet" href="/build/assets/css/tableau-create.css">
 </head>

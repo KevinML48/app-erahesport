@@ -6,11 +6,12 @@
 
         <!--========== BOX ICONS ==========-->
         <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="{{ asset('build/assets/image/logo.png') }}" type="image/x-icon">
 
         <!--========== CSS ==========-->
         <link rel="stylesheet" href="/build/assets/css/welcome.css">
 
-        <title>Responsive landing page</title>
+        <title>Bienvenue !</title>
     </head>
     <body>
         <!--========== SCROLL TOP ==========-->

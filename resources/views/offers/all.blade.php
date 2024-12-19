@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/build/assets/css/offre.css">
-    <link rel="shortcut icon" href="{{ asset('assets/teams/assets/img/ERAH_Logo_sans_texte.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('build/assets/image/logo.png') }}" type="image/x-icon">
     <title>Nos offres</title>
 </head>
 

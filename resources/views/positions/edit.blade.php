@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ludiflex | Modifier une Position</title>
+    <title>Modifier une Position</title>
     <!-- BOXICONS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- STYLE -->
     <link rel="stylesheet" href="/build/assets/css/tableau-create.css">
+    <link rel="shortcut icon" href="{{ asset('build/assets/image/logo.png') }}" type="image/x-icon">
 </head>
 <body>
     <div class="form-container">

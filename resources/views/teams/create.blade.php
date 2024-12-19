@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Créer une Équipe</title>
     <link rel="stylesheet" href="/build/assets/css/tableau-create.css">
+    <link rel="shortcut icon" href="{{ asset('build/assets/image/logo.png') }}" type="image/x-icon">
     <style>
         .file-input-wrapper {
             display: flex;

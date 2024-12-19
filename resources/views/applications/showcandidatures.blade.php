@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/build/assets/css/candidature-show.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="shortcut icon" href="{{ asset('assets/teams/assets/img/ERAH_Logo_sans_texte.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('build/assets/image/logo.png') }}" type="image/x-icon">
     <title>Candidature | {{ $application->first_name }}</title>
     <link
         rel="stylesheet"

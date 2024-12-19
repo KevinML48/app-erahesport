@@ -9,7 +9,7 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <title>Candidature | {{ $application->username }}</title>
-    <link rel="shortcut icon" href="{{ asset('assets/teams/assets/img/ERAH_Logo_sans_texte.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('build/assets/image/logo.png') }}" type="image/x-icon">
 </head>
 
 <style>
