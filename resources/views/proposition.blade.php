@@ -224,12 +224,12 @@
         </div>
 
         <div class="contact__content">
-            <select name="domain_id" class="contact__input" required style="background-color: black; color: white;">
-                <option value="" disabled {{ !$domainId ? 'selected' : '' }}></option>
-                @foreach($domains as $domain)
-                    <option value="{{ $domain->id }}" {{ old('domain_id') == $domain->id ? 'selected' : '' }}>{{ $domain->name }}</option>
-                @endforeach
-            </select>
+        <select name="domain_id" class="contact__input" required style="background-color: black; color: white;">
+    <option value="" disabled {{ !$domainId ? 'selected' : '' }}>Choisir un domaine</option>
+    @foreach($domains as $domain)
+        <option value="{{ $domain->id }}" {{ $domainId == $domain->id ? 'selected' : '' }}>{{ $domain->name }}</option>
+    @endforeach
+</select>
             <label class="contact__label">Domaine</label>
             @error('domain_id')
                 <div class="text-red-500 text-sm">{{ $message }}</div>
@@ -237,12 +237,12 @@
         </div>
 
         <div class="contact__content">
-            <select name="position_id" class="contact__input" required style="background-color: black; color: white;">
-                <option value="" disabled {{ !$positionId ? 'selected' : '' }}></option>
-                @foreach($positions as $position)
-                    <option value="{{ $position->id }}" {{ old('position_id') == $position->id ? 'selected' : '' }}>{{ $position->name }}</option>
-                @endforeach
-            </select>
+        <select name="position_id" class="contact__input" required style="background-color: black; color: white;">
+    <option value="" disabled {{ !$positionId ? 'selected' : '' }}>Choisir une position</option>
+    @foreach($positions as $position)
+        <option value="{{ $position->id }}" {{ $positionId == $position->id ? 'selected' : '' }}>{{ $position->name }}</option>
+    @endforeach
+</select>
             <label class="contact__label">Position</label>
             @error('position_id')
                 <div class="text-red-500 text-sm">{{ $message }}</div>
