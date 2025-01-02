@@ -137,46 +137,46 @@
                     <span class="shop__price">31,99$</span>
 
                     <button class="shop__button">
-                        <a href="https://www.kapoli.fr/boutiquedesclubs/Maillot-ERAH-ESPORT-p617834822" target="_blank" style="text-decoration: none; color: black">
+                        <a href="https://breakday.shop/products/maillot-erah-e-sport" target="_blank" style="text-decoration: none; color: black">
                             <i class="ri-shopping-bag-line"></i>
                         </a>
                     </button>
                 </article>
 
                 <article class="shop__card">
-                    <img src="{{ asset('build/assets/image/JERSEY - erah.png') }}" alt="image" class="shop__img">
+                    <img src="{{ asset('build/assets/image/mockup_avant_erah.png') }}" alt="image" class="shop__img">
 
                     <h3 class="shop__title">Maillot <br> 2024</h3>
                     <span class="shop__price">31,99$</span>
 
                     <button class="shop__button">
-                        <a href="https://www.kapoli.fr/boutiquedesclubs/Maillot-ERAH-ESPORT-p617834822" target="_blank" style="text-decoration: none; color: black">
+                        <a href="https://breakday.shop/products/maillot-erah-e-sport-noir" target="_blank" style="text-decoration: none; color: black">
                             <i class="ri-shopping-bag-line"></i>
                         </a>
                     </button>
                 </article>
 
                 <article class="shop__card">
-                    <img src="{{ asset('build/assets/image/Manchettes.png') }}" alt="image" class="shop__img">
+                    <img src="{{ asset('build/assets/image/Manchettes_de_bras_Erah.png') }}" alt="image" class="shop__img">
 
                     <h3 class="shop__title">Manchettes <br> 2024</h3>
-                    <span class="shop__price">18$</span>
+                    <span class="shop__price">24,99$</span>
 
                     <button class="shop__button">
-                        <a href="https://www.kapoli.fr/boutiquedesclubs/Manchettes-ERAH-p637545761" target="_blank" style="text-decoration: none; color: black">
+                        <a href="https://breakday.shop/products/manchettes-de-bras-erah-e-sport" target="_blank" style="text-decoration: none; color: black">
                             <i class="ri-shopping-bag-line"></i>
                         </a>
                     </button>
                 </article>
 
                 <article class="shop__card">
-                    <img src="{{ asset('build/assets/image/tapis de souris.png') }}" alt="image" class="shop__img">
+                    <img src="{{ asset('build/assets/image/Tapis_de_souris_Erah.png') }}" alt="image" class="shop__img">
 
                     <h3 class="shop__title">Tapis de <br> souris</h3>
-                    <span class="shop__price">35$</span>
+                    <span class="shop__price">29,99$</span>
 
                     <button class="shop__button">
-                        <a href="https://www.kapoli.fr/boutiquedesclubs/Tapis-de-souris-90-cmx40-cm-ERAH-ESPORT-p671070140" target="_blank" style="text-decoration: none; color: black">
+                        <a href="https://breakday.shop/products/tapis-de-souris-erah" target="_blank" style="text-decoration: none; color: black">
                             <i class="ri-shopping-bag-line"></i>
                         </a>
                     </button>
